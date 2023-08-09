@@ -24,7 +24,7 @@ def uploads():
     if request.method == 'POST':
         file = request.files.get('file')
         file_name = secure_filename(file.filename)
-        file.save(PurePath.joinpath(Path.cwd(), 'static/image', file_name))
+        file.save(PurePath.joinpath(Path.cwd(), '../../41_flask_and_fastAPI/seminars/seminar_2/static/image', file_name))
         return render_template('task2_1.html', file_name=file_name)
     return render_template('task2.html')
 
